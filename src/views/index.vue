@@ -14,6 +14,11 @@ export default {
 		}
 	},
 	mounted(){
+		/* fetch("/dev-api/vue-admin-template/table/list").then(response=>{
+			return response.json();
+		}).then(data=>{
+			console.log(data)
+		}) */
 		/* globalLoading.openLoading();
 		setTimeout(()=>{
 			globalLoading.openLoading();

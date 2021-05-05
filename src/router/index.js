@@ -22,6 +22,9 @@ const routes = [
 			title:"其它"
 		},
 		component:()=>import("@/views/other.vue")
+	},
+	{
+		path:"*",component:()=>import("@/views/404.vue")
 	}
 ]
 
