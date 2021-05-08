@@ -6,7 +6,7 @@
 </template>
 
 <script>
-//import globalLoading from '@/components/global-loading'
+import { getToken } from '@/api/init.js'
 export default {
 	data(){
 		return{
@@ -14,21 +14,9 @@ export default {
 		}
 	},
 	mounted(){
-		/* fetch("/dev-api/vue-admin-template/table/list").then(response=>{
-			return response.json();
-		}).then(data=>{
+		getToken({name:"1234"}).then(data=>{
 			console.log(data)
-		}) */
-		/* globalLoading.openLoading();
-		setTimeout(()=>{
-			globalLoading.openLoading();
-		},1000)
-		setTimeout(()=>{
-			globalLoading.closeLoading();
-		},2000)
-		setTimeout(()=>{
-			globalLoading.closeLoading();
-		},5000) */
+		})
 	}
 }
 </script>
