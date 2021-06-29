@@ -4,10 +4,10 @@
 		<router-view :key="key" />
 	</transition>
 	<footer>
-		<van-button type="info" to="/index">
+		<van-button to="/index" :type="getBtnType('/index')">
 			首页
 		</van-button>
-		<van-button to="/other">
+		<van-button to="/other" :type="getBtnType('/other')">
 			其它
 		</van-button>
 	</footer>
@@ -24,6 +24,11 @@ export default {
   computed:{
 	key(){
 		return this.$route.path
+	}
+  },
+  methods:{
+	getBtnType(path){
+		return this.key === path?'info':'default'
 	}
   }
 }
